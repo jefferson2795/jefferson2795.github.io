@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproducción de Video en HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        video {
+            width: 100%;
+            max-width: 720px;
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <h1>Reproducción de Video en HTML5</h1>
-    <video width="1280" height="720" controls>
+    <video controls>
         <source src="movie_720_1280_30.mp4" type="video/mp4">
         <source src="movie_720_1280_30.webm" type="video/webm">
         Tu navegador no soporta el elemento <code>video</code>.
