@@ -21,21 +21,31 @@
             margin-bottom: 20px;
             color: #333;
         }
-        video {
+        .video-container {
             width: 100%;
             max-width: 720px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        video {
+            width: 100%;
             height: auto;
             border: 1px solid #ccc;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            video {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Reproducción de Video en HTML5</h1>
-    <video controls>
-        <source src="movie_720_1280_30.mp4" type="video/mp4">
-        <source src="movie_720_1280_30.webm" type="video/webm">
-        Tu navegador no soporta el elemento <code>video</code>.
-    </video>
+    <div class="video-container">
+        <video controls autoplay loop muted preload="auto">
+            <source src="movie_720_1280_30.mp4" type="video/mp4">
+            <source src="movie_720_1280_30.webm" type="video/webm">
+            Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+    </div>
 </body>
 </html>
